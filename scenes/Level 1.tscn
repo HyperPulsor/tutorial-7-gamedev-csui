@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/World 1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Goal.tscn" type="PackedScene" id=3]
+
+[node name="Level 1" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.7283, -25.3629, 6.20499 )
+
+[node name="World 1" parent="." instance=ExtResource( 2 )]
+
+[node name="Area" parent="." instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -22.7117, -20.4847, 159.672 )
+sceneName = "Win Screen"
+
+[node name="Area2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 0, 0, 50, 0, 0, 0, 50, -17.8038, -84.2223, 118.863 )
+visible = false
