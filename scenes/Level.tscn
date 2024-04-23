@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Box.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Switch.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/item.tscn" type="PackedScene" id=4]
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.498039, 0.498039, 0.498039, 1 )
@@ -51,13 +52,13 @@ mesh = SubResource( 1 )
 shape = SubResource( 2 )
 
 [node name="Box" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97242, 1.41444, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97242, 1.41444, 9.45186 )
 
 [node name="Box3" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97242, 1.41444, -3.342 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97242, 1.41444, 6.10986 )
 
 [node name="Box2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97242, 1.41444, 3.30037 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97242, 1.41444, 12.7522 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.7144, 0.0330887 )
@@ -77,3 +78,38 @@ shape = SubResource( 7 )
 [node name="Player" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.84205, 0 )
 crouch_move_speed = 2
+
+[node name="Item" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7282, 1.89233, 3.03821 )
+contacts_reported = 1
+contact_monitor = true
+
+[node name="Item2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5438, 2.99315, 8.21532 )
+contacts_reported = 1
+contact_monitor = true
+item_name = "Potion X"
+
+[node name="Item3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7932, 2.99315, -4.06604 )
+contacts_reported = 1
+contact_monitor = true
+item_name = "Potion X"
+
+[node name="Item4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9512, 2.99315, -8.49023 )
+contacts_reported = 1
+contact_monitor = true
+item_name = "Potion X"
+
+[node name="Item5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9796, 1.71217, -14.7064 )
+contacts_reported = 1
+contact_monitor = true
+item_name = "Potion X"
+
+[node name="Item6" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0196, 5.16784, 12.9091 )
+contacts_reported = 1
+contact_monitor = true
+item_name = "Potion X"

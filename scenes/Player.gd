@@ -11,6 +11,7 @@ export var mouse_sensitivity = 0.3
 onready var head = $Head
 onready var camera = $Head/Camera
 onready var pcap = $CollisionShape
+onready var hud = $CanvasLayer/GridContainer
 
 var velocity = Vector3()
 var camera_x_rotation = 0
@@ -69,3 +70,8 @@ func _physics_process(delta):
 		velocity.y += jump_power
 
 	velocity = move_and_slide(velocity, Vector3.UP)
+
+func _on_Area_body_entered(body: RigidBody):
+	if body is Item:
+		SignalManager.emit_signal("item_grabbed", body.item_name)
+		body.queue_free()

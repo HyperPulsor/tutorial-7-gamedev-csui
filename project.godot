@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Interactable",
 "language": "GDScript",
 "path": "res://scenes/Interactable.gd"
+}, {
+"base": "RigidBody",
+"class": "Item",
+"language": "GDScript",
+"path": "res://scenes/itemPickup.gd"
 } ]
 _global_script_class_icons={
-"Interactable": ""
+"Interactable": "",
+"Item": ""
 }
 
 [application]
@@ -23,6 +29,10 @@ _global_script_class_icons={
 config/name="Basic 3D Game Mechanics"
 run/main_scene="res://scenes/Level.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+SignalManager="*res://scenes/SignalManager.gd"
 
 [input]
 

@@ -9,9 +9,6 @@ onready var light_node = get_node(light)
 
 var on = on_by_default
 
-func get_class():
-	return "Interactable"
-
 func _ready():
 	light_node.set_param(Light.PARAM_ENERGY, energy_when_on)
 
