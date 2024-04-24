@@ -22,7 +22,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.295236, -0.0894343, -0.66915
 
 [node name="RayCast" type="RayCast" parent="Head"]
 enabled = true
-cast_to = Vector3( 0, 0, -2 )
+cast_to = Vector3( 0, 1, -4 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

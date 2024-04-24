@@ -76,7 +76,7 @@ light = NodePath("../../OmniLight")
 shape = SubResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.84205, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.59722, 0 )
 crouch_move_speed = 2
 
 [node name="Item" parent="." instance=ExtResource( 4 )]
