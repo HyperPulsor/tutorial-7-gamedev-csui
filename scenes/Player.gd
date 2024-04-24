@@ -12,6 +12,7 @@ onready var head = $Head
 onready var camera = $Head/Camera
 onready var pcap = $CollisionShape
 onready var hud = $CanvasLayer/GridContainer
+onready var hud_state = $CanvasLayer/TextureRect
 
 var velocity = Vector3()
 var camera_x_rotation = 0
@@ -19,8 +20,12 @@ var default_speed = 10
 var crouch_speed = 20
 var default_height = 1.5
 var crouch_height = 0.5
+var hud_state_pos_default
+var hud_state_scale_default
 
 func _ready():
+	hud_state_pos_default = hud_state.rect_position
+	hud_state_scale_default = hud_state.rect_scale
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
@@ -51,9 +56,19 @@ func _physics_process(delta):
 		movement_vector += head_basis.x
 		
 	if Input.is_action_pressed("sprint"):
+		hud_state.rect_position = Vector2(4, 478)
+		hud_state.rect_scale = Vector2(0.25, 0.25)
+		hud_state.texture = load("res://assets/sprint.png")
 		speed = sprint_move_speed
 		
+	if Input.is_action_just_released("sprint") or Input.is_action_just_released("crouch"):
+		hud_state.rect_scale = hud_state_scale_default
+		hud_state.rect_position = hud_state_pos_default
+		hud_state.texture = load("res://assets/stand.png")
+		
 	if Input.is_action_pressed("crouch"):
+		hud_state.rect_position = Vector2(4, 488)
+		hud_state.texture = load("res://assets/crouch.png")
 		pcap.shape.height -= crouch_speed * delta
 		speed = crouch_move_speed
 	else:

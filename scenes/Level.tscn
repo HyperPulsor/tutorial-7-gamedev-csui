@@ -94,22 +94,22 @@ item_name = "Potion X"
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7932, 2.99315, -4.06604 )
 contacts_reported = 1
 contact_monitor = true
-item_name = "Potion X"
+item_name = "Food"
 
 [node name="Item4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9512, 2.99315, -8.49023 )
 contacts_reported = 1
 contact_monitor = true
-item_name = "Potion X"
+item_name = "Sword"
 
 [node name="Item5" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9796, 1.71217, -14.7064 )
 contacts_reported = 1
 contact_monitor = true
-item_name = "Potion X"
+item_name = "Armor"
 
 [node name="Item6" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0196, 5.16784, 12.9091 )
 contacts_reported = 1
 contact_monitor = true
-item_name = "Potion X"
+item_name = "Headgear"
